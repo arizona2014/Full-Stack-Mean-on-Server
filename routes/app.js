@@ -22,7 +22,14 @@ router.post('/message', function(req, res, next) {
 */
 
 router.get('/', function (req, res, next) {
-    res.render('message');
+
+    User.findOne({email: 'yasmi@gmail.com'}, function(err, doc){
+        if(err){
+            return res.send('Error');
+        }
+        res.render('message', {email:doc});
+    });
+
 });
 
 router.post('/', function(req, res, next) {
