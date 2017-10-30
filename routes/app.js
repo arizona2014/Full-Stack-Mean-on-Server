@@ -24,16 +24,22 @@ var User = require('../models/user');
 
 router.get('/', function (req, res, next) {
 
-    User.findOne({email: 'yasmi@gmail.com'}, function(err, doc){
+// Commented for adding Angular
+/*    User.findOne({email: 'yasmi@gmail.com'}, function(err, doc){
         if(err){
             return res.send('Error');
         }
         res.render('message', {email:doc});
-    });
+    });*/
+// Commented for adding Angular
+
+    res.render('index');
 
 });
 
-router.post('/', function(req, res, next) {
+
+// Commented for adding Angular
+/*router.post('/', function(req, res, next) {
     var email = req.body.email;
     var user = new User({
         firstName: 'Max',
@@ -43,6 +49,7 @@ router.post('/', function(req, res, next) {
     });
     user.save();
     res.redirect('/');
-});
+});*/
+// Commented for adding Angular
 
 module.exports = router;
