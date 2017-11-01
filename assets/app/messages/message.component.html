@@ -1,4 +1,4 @@
-<article class="panel panel-default">
+<article class="panel panel-default" [ngStyle]="{backgroundColor:color}" (mouseenter)="color = 'green'" >
     <div class="panel-body">
         {{message.content}}
     </div>
