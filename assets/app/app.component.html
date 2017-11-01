@@ -1,8 +1,9 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <input type="text" [(ngModel)]="message.content" />
-            <app-message></app-message>
-        </div>
+        <app-message-input></app-message-input>
+    </div>
+    <hr />
+    <div class="row">
+        <app-message-list></app-message-list>
     </div>
 </div>
