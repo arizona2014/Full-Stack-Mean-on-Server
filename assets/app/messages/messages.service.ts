@@ -13,7 +13,7 @@ export class MessageService {
 	}
 
 	deleteMessage(message: Message){
-		this.messages.splice(this.messages.indexOf(message));
+		this.messages.splice(this.messages.indexOf(message),1);
 	}
 
 	
