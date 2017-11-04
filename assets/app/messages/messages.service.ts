@@ -1,4 +1,4 @@
-import 'Message' from './message.model';
+import { Message } from './message.model';
 
 export class MessageService {
 
@@ -11,5 +11,10 @@ export class MessageService {
 	getMessages(){
 		return this.messages;
 	}
+
+	deleteMessage(message: Message){
+		this.messages.splice(this.messages.indexOf(message));
+	}
+
 	
 }
