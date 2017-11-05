@@ -1,6 +1,3 @@
-/**
- * Created by Arizona on 10/30/2017.
- */
 export class Message {
 
     content: string;
