@@ -10,9 +10,7 @@ import {Message} from "./message.model";
 
 export class MessageInputComponent {
 
-    constructor (private messageService: MessageService){
-
-    }
+    constructor (private messageService: MessageService){ }
 
     onSave(value: String){
         const message = new Message(value,'Andy');
