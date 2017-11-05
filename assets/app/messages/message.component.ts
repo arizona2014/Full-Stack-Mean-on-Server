@@ -1,8 +1,6 @@
 import {Component, Input, Output, EventEmitter} from "@angular/core";
 import {Message} from "./message.model";
-/**
- * Created by Arizona on 10/30/2017.
- */
+
 @Component({
     selector: 'app-message',
     templateUrl: './message.component.html',
