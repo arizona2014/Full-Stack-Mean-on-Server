@@ -8,8 +8,7 @@ import { MessageService } from "./messages.service";
     template: `
         <div class=".col-md-8 col-md-offset-2">
             <app-message
-                    [message]="message"
-                    (editClicked)="message.content = $event"
+                    [message]="message"                    
                     *ngFor="let message of messages"
             >
             </app-message>
@@ -23,7 +22,13 @@ export class MessageListComponent {
     constructor(private messageService: MessageService){  }
 
     ngOnInit(){
-        this.messages = this.messageService.getMessages();
+
+        this.messageService.getMessages()
+            .subscribe(
+                (messages: Message[]) => {
+                    this.messages = messages;
+                }
+            );
 
     }
 
