@@ -4,9 +4,9 @@
     </div>
     <footer class="panel-footer">
         <div class="author">
-            {{message.author}}
+            {{message.username}}
         </div>
-        <div class="config">
+        <div class="config" *ngIf="belongsToUser()">
             <a (click)="onEdit()">Edit</a>
             <a (click)="onDelete()">Delete</a>
         </div>
