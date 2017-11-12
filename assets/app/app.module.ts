@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from "./app.component";
-import {FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MessageComponent } from "./messages/message.component";
 import { MessageListComponent } from "./messages/message-list.component";
 import { MessageInputComponent } from "./messages/message-input.component";
@@ -14,6 +14,8 @@ import { SigninComponent } from "./auth/signin.component";
 import { SignupComponent } from "./auth/signup.component";
 import { HttpModule } from "@angular/http";
 import { AuthService } from "./auth/auth.service";
+import { ErrorComponent } from "./errors/error.component";
+import { ErrorService } from "./errors/error.service";
 
 @NgModule({
     declarations: [
@@ -26,7 +28,8 @@ import { AuthService } from "./auth/auth.service";
         HeaderComponent,
         LogoutComponent,
         SigninComponent,
-        SignupComponent
+        SignupComponent,
+        ErrorComponent
     ],
     imports: [
         BrowserModule,
@@ -36,7 +39,8 @@ import { AuthService } from "./auth/auth.service";
         HttpModule
     ],
     providers: [
-        AuthService
+        AuthService,
+        ErrorService
     ],
     bootstrap: [AppComponent]
 })
